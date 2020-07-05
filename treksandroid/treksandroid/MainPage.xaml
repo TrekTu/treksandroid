@@ -8,18 +8,18 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="trek,trek,wake up!" 
-           HorizontalOptions="Center"
-            />
-        <Editor x:Name="editor"
-                Placeholder="Enter your note"
-                HeightRequest="100" />
+
+        <Editor x:Name="urleditor"
+                Placeholder="Enter your url"
+                HeightRequest="50" />
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Text="bing"
+            <Button  Grid.Column="0"
+                    Text="bing"
                     Clicked="bing" />
             <Button Grid.Column="1"
                     Text="IP"
@@ -27,7 +27,13 @@
             <Button Grid.Column="2"
                     Text="oxford"
                     Clicked="oxford"/>
+
         </Grid>
+        <WebView  x:Name="webview1"
+            Source="http://ifconfig.io"
+        HeightRequest="500"
+        WidthRequest="1000" />
+
     </StackLayout>
 
 </ContentPage>

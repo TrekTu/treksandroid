@@ -18,24 +18,34 @@ namespace treksandroid
         public MainPage()
         {
             InitializeComponent();
+
+            
+            
         }
          
         void bing(object sender, EventArgs e)
         {
-            string myuri = "https://cn.bing.com/dict/search?q=" + editor.Text;
-             Browser.OpenAsync(myuri, BrowserLaunchMode.SystemPreferred);
+
+            string url = "https://cn.bing.com/dict/search?q=" + urleditor.Text;
+            webview1.Source = url;
+            //  string myuri = "https://cn.bing.com/dict/search?q=" + editor.Text;
+            //  Browser.OpenAsync(myuri, BrowserLaunchMode.SystemPreferred);
         }
         void ip(object sender, EventArgs e)
         {
-            string myuri = "https://whatismyipaddress.com/ip/" + editor.Text;
-            Browser.OpenAsync(myuri, BrowserLaunchMode.SystemPreferred);
+            string url = "https://whatismyipaddress.com/ip/" + urleditor.Text;
+            webview1.Source = url;
+            //  string myuri = "https://whatismyipaddress.com/ip/" + editor.Text;
+            // Browser.OpenAsync(myuri, BrowserLaunchMode.SystemPreferred);
         }
         void oxford(object sender, EventArgs e)
         {
-            string myuri = "https://www.oxfordlearnersdictionaries.com/us/definition/english/" + editor.Text;
-            Browser.OpenAsync(myuri, BrowserLaunchMode.SystemPreferred);
+            string url = "https://www.oxfordlearnersdictionaries.com/us/definition/english/" + urleditor.Text;
+            webview1.Source = url;
+            //   string myuri = "https://www.oxfordlearnersdictionaries.com/us/definition/english/" + editor.Text;
+            //      Browser.OpenAsync(myuri, BrowserLaunchMode.SystemPreferred);
         }
-
+      
 
 
     }
